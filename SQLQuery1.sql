@@ -19,3 +19,7 @@ insert into employee_payroll values
 ('Madhu',200000.0,'2021-06-15'),
 ('Vinayak',300000.0,'2022-02-21')
 
+--UC4-Retrieve and fetch all data 
+select * from employee_payroll
+
+

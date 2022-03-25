@@ -10,8 +10,8 @@ name varchar(100) not null,
 salary money not null,
 start date not null,
 );
---check ctable created succesfully
-select * from  employee_payroll
+--check table created succesfully
+select * from  employee_payroll;
 
 --UC3-Insert Data
 insert into employee_payroll values
@@ -20,6 +20,13 @@ insert into employee_payroll values
 ('Vinayak',300000.0,'2022-02-21')
 
 --UC4-Retrieve and fetch all data 
+select * from employee_payroll;
+
+--UC5-Find Range or salary of employee
+select salary from  employee_payroll where name = 'Shashi'
 select * from employee_payroll
+where start between cast('2020-01-03' As datetime) and GETDATE();
+
+
 
 

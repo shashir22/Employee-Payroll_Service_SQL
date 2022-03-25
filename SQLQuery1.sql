@@ -27,6 +27,14 @@ select salary from  employee_payroll where name = 'Shashi'
 select * from employee_payroll
 where start between cast('2020-01-03' As datetime) and GETDATE();
 
+--UC6-Add Gender column and update
+ALTER TABLE employee_payroll
+ADD gender char(2)
+
+update employee_payroll set gender = 'M' where name ='Shashi' or name = 'Madhu';
+update employee_payroll set gender = 'M' where name ='Vinayak';
+
+
 
 
 

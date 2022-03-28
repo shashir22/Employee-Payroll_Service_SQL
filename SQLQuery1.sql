@@ -51,6 +51,15 @@ phone varchar(13),
 department varchar(100) not null default 'Mca',
 address varchar(250) not null default 'Banglore'
 
+--UC9-Extend Employee Data and Salary into basic pay
+select * from employee_payroll
+sp_rename 'employee_payroll.salary' , 'basic_pay'
+alter table employee_payroll add
+deduction real ,
+taxable_pay money,
+income_tax money,
+net_pay float;
+
 
 
 
